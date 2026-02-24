@@ -9,9 +9,16 @@ function DisplayProposals() {
     setYSWSName(event.target.value);
   };
 
+  const handleSubmisson = (event) => {
+    event.preventDefault();
+    setDisplayName(userName);
+  }
+
   return (
     <div>
-      <h1>{name}</h1>
+      <form onSubmit={handleSubmisson}>
+        <label>Draft Name</label>
+      </form>
     </div>
   );
 }
